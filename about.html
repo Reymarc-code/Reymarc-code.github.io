@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reymarc Lapitan | Personal Website</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+    body {
+      background-color: #f9fafb;
+      color: #374151;
+    }
+    .sidebar {
+      width: 250px;
+      min-height: 100vh;
+      background-color: #ffffff;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+    }
+    .sidebar .nav-link {
+      color: #374151;
+      font-weight: 500;
+      padding: 10px 20px;
+      border-radius: 0 30px 30px 0;
+      transition: all 0.3s ease;
+    }
+    .sidebar .nav-link.active,
+    .sidebar .nav-link:hover {
+      background-color: #e8f0fe;
+      color: #0d6efd;
+    }
+    .profile-pic {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .sidebar-footer {
+      font-size: 0.9rem;
+      color: #6b7280;
+      padding: 20px;
+      border-top: 1px solid #e5e7eb;
+    }
+    .content-area {
+      flex-grow: 1;
+      padding: 40px;
+    }
+    .profile-header {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      margin-bottom: 30px;
+    }
+    .profile-header img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #e5e7eb;
+    }
+    .profile-info h2 {
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+    .profile-info p {
+      margin-bottom: 8px;
+    }
+    .card {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    .card h5 {
+      font-weight: 600;
+    }
+    .skills span {
+      background-color: #e8f0fe;
+      color: #0d6efd;
+      border-radius: 20px;
+      padding: 6px 14px;
+      margin: 5px;
+      display: inline-block;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    @media (max-width: 991px) {
+      .content-area {
+        padding: 20px;
+      }
+      .profile-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="d-flex flex-lg-row flex-column">
+    <!-- Sidebar (Offcanvas on Mobile) -->
+    <nav class="sidebar d-none d-lg-flex flex-column justify-content-between">
+      <div>
+        <div class="text-center py-4 border-bottom">
+          <img src="img/dp.jpeg" alt="Profile" class="profile-pic mb-2">
+          <h5 class="mb-0 fw-semibold">Reymarc Lapitan</h5>
+          <small class="text-muted">BSIT</small>
+        </div>
+
+        <nav class="nav flex-column mt-3">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link active">About</a>
+          <a href="projects.html" class="nav-link">Projects</a>
+        </nav>
+      </div>
+
+      <div class="sidebar-footer text-center">
+        <p class="mb-0">© 2025 Reymarc Lapitan</p>
+        <small>All rights reserved.</small>
+      </div>
+    </nav>
+
+    <!-- Offcanvas Sidebar for Mobile -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileSidebar">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Reymarc Lapitan</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body d-flex flex-column justify-content-between">
+        <div>
+          <div class="text-center py-3 border-bottom">
+            <img src="img/dp.jpeg" alt="Profile" class="profile-pic mb-2">
+            <small class="text-muted d-block">BSIT Student</small>
+          </div>
+
+          <nav class="nav flex-column mt-3">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link active">About</a>
+            <a href="projects.html" class="nav-link">Projects</a>
+          </nav>
+        </div>
+        <div class="text-center border-top pt-3">
+          <small class="text-muted">© 2025 Reymarc Lapitan</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="content-area flex-grow-1">
+      <!-- Mobile Header -->
+      <div class="d-flex d-lg-none justify-content-between align-items-center mb-4">
+        <button class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar">
+          <i class="bi bi-list"></i> Menu
+        </button>
+        <h5 class="fw-bold mb-0">Reymarc Lapitan</h5>
+      </div>
+
+      <header class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="fw-bold text-dark mb-0">About Me</h1>
+        <nav class="d-none d-md-flex gap-3">
+          <a href="index.html" class="text-secondary text-decoration-none">Home</a>
+          <a href="about.html" class="text-primary fw-semibold text-decoration-none">About</a>
+          <a href="projects.html" class="text-secondary text-decoration-none">Projects</a>
+        </nav>
+      </header>
+
+      <!-- Profile Section -->
+      <section class="mt-3" style="max-width: 800px;">
+        <div class="profile-header">
+          <img src="img/dp.jpeg" alt="Profile Picture">
+          <div class="profile-info">
+            <h2>Reymarc Lapitan</h2>
+            <p class="text-secondary mb-1">BS Information Technology Student</p>
+          </div>
+        </div>
+
+        <div class="card mb-4 p-4">
+          <h5>About Me</h5>
+          <p class="text-secondary mb-0">
+            I’m a BSIT student passionate about creating visually appealing and responsive websites. 
+            I love experimenting with design tools and front-end technologies to turn creative ideas into real, working web experiences. 
+            In my free time, I enjoy playing games like Mobile Legends and exploring design inspirations online.
+          </p>
+        </div>
+
+        <div class="card mb-4 p-4">
+          <h5>Education</h5>
+          <ul class="text-secondary mb-0">
+            <li><strong>BS in Information Technology</strong> — Polytechnic University of the Philippines - Sto. Tomas Branch</li>
+            <li><strong>Senior High School:</strong> Sto. Tomas Senior High School</li>
+            <li><strong>Junior High School:</strong> San Jose National High School</li>
+          </ul>
+        </div>
+
+        <div class="card mb-4 p-4">
+          <h5>Skills</h5>
+          <div class="skills">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Bootstrap</span>
+            <span>JavaScript</span>
+            <span>Figma</span>
+            <span>Photoshop</span>
+            <span>Responsive Design</span>
+          </div>
+        </div>
+
+        <div class="card p-4">
+          <h5>Contact Information</h5>
+          <ul class="text-secondary mb-0">
+            <li>Email: <a href="mailto:reymarclapitan0@gmail.com" class="text-primary text-decoration-none">reymarclapitan0@gmail.com</a></li>
+            <li>Location: Philippines</li>
+            <li>GitHub: <a href="https://github.com/reymarc-code" class="text-primary text-decoration-none">@reymarc-code</a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Bootstrap JS + Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+</body>
+</html>
